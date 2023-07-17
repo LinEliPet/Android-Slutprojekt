@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:layout_margin="10dp"
+    tools:context=".MainActivity2">
+
+    <TextView
+        android:id="@+id/sek_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:text="SEK: " />
+
+    <EditText
+        android:id="@+id/textNumber"
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_toEndOf="@+id/sek_text"
+        android:autofillHints="Amount"
+        android:ems="10"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/button_calculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="10dp"
+        android:layout_toEndOf="@+id/textNumber"
+        android:text="Calc" />
+
+    <TextView
+        android:id="@+id/calcResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button_calculate"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:textAlignment="center" />
+
+    <TextView
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/calcResult"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:padding="10dp"
+        android:text="Chosen currency:"
+        android:textAlignment="center" />
+
+    <TextView
+        android:id="@+id/chosenCurrency"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:textAlignment="center" />
+
+    <Spinner
+        android:id="@+id/spinId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/chosenCurrency"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="10dp"
+        android:padding="20dp"
+        />
+
+    <ProgressBar
+        android:id="@+id/loadingIndicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainerView"
+        android:name="com.linda.slutprojekt.First2Fragment"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_marginBottom="0dp"
+        android:layout_below="@+id/spinId"
+        />
+
+</RelativeLayout>
